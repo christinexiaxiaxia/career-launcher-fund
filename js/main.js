@@ -1,12 +1,30 @@
-// CLICK TO NEXT PAGE
+// BACK/NEXT BUTTONS
 
-$('.next').click(function(){
-	$('div.page.landing').animate({
-		top: '-100vh'
-	}, 1000, function() {
-    // Animation complete.
+var pageNum = 0;
+
+if(pageNum == 0) {
+	$('.next').click(function(){
+		$('div.page.landing').addClass('up')
+		pageNum++;
+	})
+// } else {
+	$('.back').click(function(){
+		$('div.page.landing').removeClass('up')
+		pageNum--;
 	});
-})
+}
+
+// if(pageNum == 1) {
+// 	$('.next').click(function(){
+// 		$('div.page.page1').addClass('up')
+// 		pageNum++;
+// 	});
+
+// 	$('.back').click(function(){
+// 		$('div.page.landing').removeClass('up')
+// 		pageNum--;
+// 	});
+// }
 
 
 

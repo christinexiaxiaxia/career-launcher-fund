@@ -55,7 +55,7 @@ body {
 .column {
 	position: absolute;
 	height: calc(100vh - 4rem);
-	top: 100vh;
+	top: 0vh;
 	padding: 2rem;
 
 	overflow: auto;
@@ -187,20 +187,6 @@ a.to-rave {
 
 
 
-span.da-ge {
-	font-size: 1.7rem;
-	font-family: serif;
-}
-
-
-
-
-ul {
-	list-style-type: none;
-}
-
-
-
 
 /*HOVER STUFF*/
 
@@ -310,7 +296,7 @@ p.a {
 
 
 
-/* LANDING */
+/* PAGES */
 
 
 html {
@@ -335,11 +321,38 @@ html {
 	width: calc(100vw - 4.25rem);
 	height: calc(100vh - 7rem);
 
+	padding: 2rem 2rem 4rem 2rem;
+}
+
+.page {
+	background-color: white;
+
+	transition: 1s;
+}
+
+.page.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: calc(100vw - 4.25rem);
+	height: calc(100vh - 4rem);
+
 	padding: 2rem;
 }
 
+.up {
+	top: -100vh;
+}
+
+
+
+
+
+
 #end {
 	margin-bottom: 0;
+
+	z-index: 100;
 }
 
 .landing.header {
@@ -438,6 +451,8 @@ a.next {
 	text-decoration: none;
 
 	cursor: e-resize;
+
+	z-index: 100;
 }
 
 a.back {
@@ -453,6 +468,8 @@ a.back {
 	text-decoration: none;
 
 	cursor: w-resize;
+
+	z-index: 100;
 }
 
 a.restart {
@@ -491,11 +508,15 @@ a.next:hover {
 
 .landing.cat.text {
 	position: absolute;
-	bottom: 0rem;
+	bottom: 2rem;
 	left: 2rem;
 }
 
-.landing.cat {
+.landing.text {
+	bottom: auto;
+}
+
+.cat {
 	font-size: 3rem;
 	line-height: 3rem;
 }
