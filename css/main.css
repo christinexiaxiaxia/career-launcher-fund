@@ -53,7 +53,7 @@ body {
 }
 
 .column {
-	position: absolute;
+	position: fixed;
 	height: calc(100vh - 4rem);
 	top: 0vh;
 	padding: 2rem;
@@ -124,8 +124,8 @@ span.a,
 span.b,
 span.date,
 .b.works-list {
- 	font-size: 2rem;
- 	line-height: 2.5rem;
+ 	font-size: 3rem;
+ 	line-height: 3.5rem;
 }
 
 p.main,
@@ -170,6 +170,10 @@ p.main-works,
 
 a {
 	color: black;
+}
+
+a.a {
+	font-size: 3rem;
 }
 
 a.to-vernacular,
@@ -251,6 +255,10 @@ img.wink {
 
 
 
+
+
+
+
 /*MARGINS AND INDENTS*/
 
 p.a {
@@ -319,9 +327,9 @@ html {
 	top: 0;
 	left: 0;
 	width: calc(100vw - 4.25rem);
-	height: calc(100vh - 7rem);
+	height: calc(100vh - 4rem);
 
-	padding: 2rem 2rem 4rem 2rem;
+	padding: 2rem;
 }
 
 .page {
@@ -356,8 +364,8 @@ html {
 }
 
 .landing.header {
-	font-size: 4rem;
-	line-height: 4rem;
+	font-size: 3rem;
+	line-height: 3.5rem;
 }
 
 .landing.header.full-site {
@@ -370,7 +378,7 @@ html {
 .landing.bg-img-wrapper {
 	position: absolute;
 	width: calc(100vw - 8rem);
-	height: calc(100vh - 10rem);
+	height: calc(100vh - 8rem);
 	top: 0;
 	left: 0;
 	margin: 4rem;
@@ -453,6 +461,7 @@ a.next {
 	cursor: e-resize;
 
 	z-index: 100;
+	transition-duration: 0.2s;
 }
 
 a.back {
@@ -470,6 +479,9 @@ a.back {
 	cursor: w-resize;
 
 	z-index: 100;
+
+	opacity: 0;
+	transition-duration: 0.2s;
 }
 
 a.restart {
@@ -508,7 +520,7 @@ a.next:hover {
 
 .landing.cat.text {
 	position: absolute;
-	bottom: 2rem;
+	bottom: 0rem;
 	left: 2rem;
 }
 
@@ -591,19 +603,23 @@ a.next:hover {
 
 	.column.left,
 	.column.right {
+		position: fixed;
 		width: calc(100vw - 3rem);
 	}
 
 	.column.left {
 		height: calc(35vh - 2.25rem);
 		top: 0;
+		left: 0;
 		margin-bottom: 0.75rem;
 		padding: 1.5rem 1.5rem 0rem 1.5rem;
 	}
 
 	.column.right {
+
 		height: calc(65vh - 2.25rem);
-		top: 35vh;
+		top: 0;
+		right: 0;
 		margin-top: 0.75rem;
 		padding: 0rem 1.5rem 1.5rem 1.5rem;
 	}
